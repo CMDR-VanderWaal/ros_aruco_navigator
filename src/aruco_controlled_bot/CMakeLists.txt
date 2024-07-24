@@ -108,7 +108,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES aruco_controlled_bot
-#  CATKIN_DEPENDS message_generation rospy std_msgs
+  CATKIN_DEPENDS message_generation rospy std_msgs
 #  DEPENDS system_lib
 )
 
@@ -163,6 +163,8 @@ include_directories(
 ## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
  catkin_install_python(PROGRAMS
+   src/scripts/esp_controlled_copy.py
+   src/scripts/esp_controlled.py
    src/scripts/controller.py
    src/scripts/listener_bot.py
    src/scripts/minimal.py
